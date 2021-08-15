@@ -21,13 +21,13 @@ fn main() {
     .min_dimensions(res.x, res.y)
     .dimensions(res.x, res.y);
   // Make a Context.
-  let (mut ctx, event_loop) = ContextBuilder::new("Steering", "Kharenzze")
+  let (ctx, event_loop) = ContextBuilder::new("Steering", "Kharenzze")
     .window_setup(window_setup)
     .window_mode(window_mode)
     .build()
     .expect("aieee, could not create ggez context!");
 
-  let mut state = MainState{};
+  let state = MainState{};
 
   event::run(ctx, event_loop, state);
 }
